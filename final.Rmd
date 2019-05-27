@@ -1,0 +1,79 @@
+---
+title: "final"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 문장 2단계
+### 문장 3단계
+###같이붙이면?
+
+*기울임*
+_기울임2_
+**강조**
+__강조2__
+~~취소선~~
+
+[네이버](https://www.naver.com)하이퍼링크
+```{r}
+summary(cars)
+```
+백쿼테이션 앞뒤
+`summary(cars)`
+
+백쿼테이션 앞에만
+`summary(cars)
+```{r}
+library(ggplot2)
+qplot(data = mpg, x = drv, fill = drv)
+```
+
+1. 목록
+  * 목록 1-1
+    + 목록 1-2
+      - 목록 1-3
+      
+$$1+2+3+4+5$$
+
+$1+x+y=5$
+$$1+x+y=5$$
+
+## 코드와 결과 둘다 출력
+```{r}
+summary(cars)
+```
+
+## 코드 x, 결과만 출력
+```{r, echo=FALSE}
+summary(cars)
+```
+
+## 결과 x, 코드만 출력
+```{r, eval=FALSE}
+summary(cars)
+```
+
+
+## kable 출력/테두리
+```{r}
+knitr::kable(mtcars)
+```
+
+## kable 출력/asis 기능
+```{r, reseult='asis'}
+knitr::kable(mtcars)
+```
+
+## table 출력/asis 기능
+```{r, results='asis'}
+summary(cars)
+```
+
+## table 출력/asis 없이
+```{r}
+summary(cars)
+```
+
